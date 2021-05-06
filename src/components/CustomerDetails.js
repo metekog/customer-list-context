@@ -8,7 +8,7 @@ import {
 } from "@material-ui/core";
 import React, { useContext, useEffect } from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import { Link, useHistory, useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { CustomerContext } from "../context/context";
 
 const useStyles = makeStyles((theme) => ({
