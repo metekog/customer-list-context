@@ -1,7 +1,17 @@
 import { createContext, useReducer, useState } from "react";
 import { contextReducer } from "./contextReducer";
 
-const initialState = JSON.parse(localStorage.getItem("customers")) || [];
+const initialState = JSON.parse(localStorage.getItem("customers")) || [
+  {
+    id: "j34kl2j34",
+    name: "John",
+    type: "Primary",
+    address: "Ankara,Turkey",
+    phone: "+9040044505",
+    email: "john@mail.com",
+    website: "john.com",
+  },
+];
 
 export const CustomerContext = createContext(initialState);
 
