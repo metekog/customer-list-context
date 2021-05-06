@@ -4,12 +4,21 @@ import { contextReducer } from "./contextReducer";
 const initialState = JSON.parse(localStorage.getItem("customers")) || [
   {
     id: "j34kl2j34",
-    name: "John",
+    name: "Sebastian",
     type: "Primary",
     address: "Ankara,Turkey",
     phone: "+9040044505",
-    email: "john@mail.com",
-    website: "john.com",
+    email: "sebastian@mail.com",
+    website: "sebastian.com",
+  },
+  {
+    id: "4543dfsds",
+    name: "Vettel",
+    type: "Secondary",
+    address: "İstanbul,Turkey",
+    phone: "+904004234505",
+    email: "vettel@mail.com",
+    website: "vettel.com",
   },
 ];
 
