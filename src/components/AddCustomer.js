@@ -65,12 +65,7 @@ const AddCustomer = ({ setOpen }) => {
     <Grid container spacing={2} style={{ padding: "20px" }}>
       <Grid item xs={12}>
         <CloseIcon className={classes.icon} onClick={() => setOpen(false)} />
-        <Typography
-          align="center"
-          variant="subtitle2"
-          gutterBottom
-          className={classes.radioGroup}
-        >
+        <Typography align="center" variant="subtitle1" gutterBottom>
           Create New Customer
         </Typography>
       </Grid>
