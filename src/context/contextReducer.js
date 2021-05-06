@@ -3,6 +3,7 @@ export const contextReducer = (state, action) => {
   switch (action.type) {
     case "ADD_CUSTOMER":
       customers = [action.payload, ...state];
+      localStorage.setItem("customers", JSON.stringify(customers));
       return customers;
 
     case "DELETE_CUSTOMER":
