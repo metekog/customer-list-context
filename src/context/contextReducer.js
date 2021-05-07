@@ -10,6 +10,7 @@ export const contextReducer = (state, action) => {
       customers = state.filter((customer) => customer.id !== action.payload);
       localStorage.setItem("customers", JSON.stringify(customers));
       return customers;
+
     default:
       break;
   }

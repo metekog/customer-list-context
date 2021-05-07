@@ -32,7 +32,7 @@ const useStyles = makeStyles((theme) => ({
     float: "right",
   },
 }));
-const CustomerDetails = ({ match }) => {
+const CustomerDetails = () => {
   const { getCustomer, selectedCustomer } = useContext(CustomerContext);
 
   const { customerId } = useParams();
@@ -64,19 +64,19 @@ const CustomerDetails = ({ match }) => {
         </Grid>
         <Grid item xs={9}>
           <Paper className={classes.paper}>
-            <Typography variant="p" style={{ marginTop: "20px" }}>
+            <Typography style={{ marginTop: "20px" }}>
               <b>Customer Type</b>
               <br /> {selectedCustomer.type}
             </Typography>
           </Paper>
           <Paper className={classes.paper}>
-            <Typography variant="p" style={{ marginTop: "20px" }}>
+            <Typography style={{ marginTop: "20px" }}>
               <b>Customer Email</b>
               <br /> {selectedCustomer.email}
             </Typography>
           </Paper>
           <Paper className={classes.paper}>
-            <Typography variant="p" style={{ marginTop: "20px" }}>
+            <Typography style={{ marginTop: "20px" }}>
               <b>Customer Phone</b>
               <br /> {selectedCustomer.phone}
             </Typography>
@@ -88,7 +88,7 @@ const CustomerDetails = ({ match }) => {
             </Typography>
           </Paper>
           <Paper className={classes.paper}>
-            <Typography variant="p" style={{ marginTop: "20px" }}>
+            <Typography style={{ marginTop: "20px" }}>
               <b>Customer ID</b>
               <br /> {selectedCustomer.id}
             </Typography>

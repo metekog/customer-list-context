@@ -59,6 +59,7 @@ const AddCustomer = ({ setOpen }) => {
     };
     addCustomer(customer);
     setFormData(initialState);
+    setOpen(false);
   };
 
   return (

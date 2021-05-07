@@ -7,8 +7,8 @@ const initialState = JSON.parse(localStorage.getItem("customers")) || [
     name: "Sebastian",
     type: "Primary",
     address: "Ankara,Turkey",
-    phone: "+9040044505",
-    email: "sebastian@mail.com",
+    phone: "+904004234510",
+    email: "mail@sebastian.com",
     website: "sebastian.com",
   },
   {
@@ -17,7 +17,7 @@ const initialState = JSON.parse(localStorage.getItem("customers")) || [
     type: "Secondary",
     address: "İstanbul,Turkey",
     phone: "+904004234505",
-    email: "vettel@mail.com",
+    email: "mail@vettel.com",
     website: "vettel.com",
   },
 ];

@@ -21,7 +21,7 @@ const useStyles = makeStyles({
     minWidth: 650,
   },
   button: {
-    margin: "7px",
+    margin: "10px",
     float: "right",
   },
 });
@@ -80,13 +80,14 @@ const CustomerList = () => {
               <TableCell>{customer.phone}</TableCell>
               <TableCell>{customer.email}</TableCell>
               <TableCell>{customer.website}</TableCell>
-              <Button
+              {/* <Button
                 className={classes.button}
                 variant="outlined"
                 color="primary"
+                
               >
                 Update
-              </Button>
+              </Button> */}
               <Button
                 className={classes.button}
                 variant="outlined"
