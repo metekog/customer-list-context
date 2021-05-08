@@ -8,13 +8,13 @@ import CustomerDetails from "./components/CustomerDetails";
 function App() {
   return (
     <CustomerProvider>
-        <Router>
-          <Switch>
-            <Route exact path="/" component={CustomerList} />
-            <Route path="/add" component={AddCustomer} />
-            <Route path="/customer/:customerId" component={CustomerDetails} />
-          </Switch>
-        </Router>
+      <Router>
+        <Switch>
+          <Route exact path="/" component={CustomerList} />
+          <Route path="/add" component={AddCustomer} />
+          <Route path="/customer/:customerId" component={CustomerDetails} />
+        </Switch>
+      </Router>
     </CustomerProvider>
   );
 }

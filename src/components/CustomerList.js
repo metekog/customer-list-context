@@ -26,7 +26,7 @@ const useStyles = makeStyles({
   },
 });
 
-const CustomerList = () => {
+const CustomerList = ({ setEditable }) => {
   const classes = useStyles();
   const { deleteCustomer, customers } = useContext(CustomerContext);
   const [open, setOpen] = useState(false);
@@ -47,7 +47,7 @@ const CustomerList = () => {
       </Button>
       <TableContainer component={Paper}>
         <Table className={classes.table} aria-label="simple table">
-          <TableHead>
+          <TableHead style={{ background: "#f1f1f1" }}>
             <TableRow>
               <TableCell>
                 <b>Customer Name</b>
@@ -80,14 +80,14 @@ const CustomerList = () => {
               <TableCell>{customer.phone}</TableCell>
               <TableCell>{customer.email}</TableCell>
               <TableCell>{customer.website}</TableCell>
-              {/* <Button
+              <Button
                 className={classes.button}
                 variant="outlined"
                 color="primary"
-                
+                onClick={() => setOpen(true) && setEditable(true)}
               >
                 Update
-              </Button> */}
+              </Button>
               <Button
                 className={classes.button}
                 variant="outlined"
@@ -101,7 +101,7 @@ const CustomerList = () => {
         </Table>
       </TableContainer>
       <Drawer anchor="right" open={open} onClose={() => setOpen(false)}>
-        <div style={{ width: "500px" }}>
+        <div>
           <AddCustomer setOpen={setOpen} />
         </div>
       </Drawer>

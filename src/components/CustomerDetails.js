@@ -14,6 +14,8 @@ import { CustomerContext } from "../context/context";
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
+    display: "flex",
+    flexDirection: "column",
   },
   paper: {
     padding: theme.spacing(2),
@@ -43,17 +45,15 @@ const CustomerDetails = () => {
 
   const classes = useStyles();
 
-  console.log(selectedCustomer);
-
   return (
-    <Container fixed>
+    <Container fixed className={classes.root}>
       <Link to="/">
         <Button color="secondary" variant="outlined" className={classes.button}>
           Home
         </Button>
       </Link>
       <Grid container spacing={2}>
-        <Grid item xs={3}>
+        <Grid item xs={12} sm={3}>
           <Paper className={classes.paper}>
             <Avatar className={classes.avatar} />
             <Typography variant="h6" style={{ marginTop: "20px" }}>
@@ -62,7 +62,7 @@ const CustomerDetails = () => {
             </Typography>
           </Paper>
         </Grid>
-        <Grid item xs={9}>
+        <Grid item xs={12} sm={9}>
           <Paper className={classes.paper}>
             <Typography style={{ marginTop: "20px" }}>
               <b>Customer Type</b>
@@ -89,8 +89,8 @@ const CustomerDetails = () => {
           </Paper>
           <Paper className={classes.paper}>
             <Typography style={{ marginTop: "20px" }}>
-              <b>Customer ID</b>
-              <br /> {selectedCustomer.id}
+              <b>Customer Address</b>
+              <br /> {selectedCustomer.address}
             </Typography>
           </Paper>
         </Grid>
